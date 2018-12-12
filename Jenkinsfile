@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     tools {
-        sfdx 'sfdx'
+        CustomTool 'sfdx'
     }
     stages {
         stage('Stage 1') {
