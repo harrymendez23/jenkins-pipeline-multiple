@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     tools {
-        tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool' 
+        com.cloudbees.jenkins.plugins.customtools.CustomTool name: 'sfdx'
     }
     stages {
         stage('Stage 1') {
