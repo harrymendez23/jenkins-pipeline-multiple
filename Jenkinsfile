@@ -1,7 +1,7 @@
 pipeline { 
     agent any 
     environment {
-        HUB_ORG = env.HUB_ORG_DH
+        HUB_ORG = '${env.HUB_ORG_DH}'
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
     }
     stages {
