@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Create Scratch Org') {
             steps {
-                sh '{$sfdx}/sfdx --version'
+                sh "{$sfdx}/sfdx --version"
             }
         }
     }
