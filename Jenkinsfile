@@ -11,11 +11,6 @@ pipeline {
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
     }
     stages {
-        stage('Stage 1') {
-            steps {
-                echo 'in stage 1 HUB: ${HUB_ORG}'
-            }
-        }
         stage('Initialize Scratch Org') {
             options {
                 timeout(time: 5, unit: 'MINUTES')
@@ -55,11 +50,12 @@ pipeline {
                     steps {
                         sh "${SFDX}/sfdx force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SCRATCH_ORG_ALIAS}"
                     }
-
-                    steps('Collect Test Results') {
+                } 
+                stage('Collect Test Results') {
+                    steps {
                         junit keepLongStdio: true, testResults: 'tests/*-junit.xml'
                     }
-                } 
+                }
             }
         }
         stage('Delete Scratch Org') {
