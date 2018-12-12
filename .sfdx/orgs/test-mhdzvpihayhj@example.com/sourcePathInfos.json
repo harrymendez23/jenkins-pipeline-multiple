@@ -2,14 +2,14 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1544630762889,
             "changeTime": 1544630762889,
             "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isMetadataFile": false,
+            "state": "u",
             "isWorkspace": false,
             "isArtifactRoot": true
         }
@@ -17,14 +17,14 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1544630762889,
             "changeTime": 1544630762889,
             "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isMetadataFile": false,
+            "state": "u",
             "isWorkspace": false,
             "isArtifactRoot": false
         }
@@ -32,14 +32,14 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1544632002521,
             "changeTime": 1544632002521,
             "contentHash": "78dd78c06e81fd7afb457ecdb5af8fae5546e0a3",
+            "isMetadataFile": false,
+            "state": "u",
             "isWorkspace": false,
             "isArtifactRoot": false
         }
@@ -47,14 +47,14 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\aura",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\aura",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1544630762889,
             "changeTime": 1544630762889,
             "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
             "isWorkspace": false,
             "isArtifactRoot": false
         }
@@ -67,24 +67,23 @@
             "isDirectory": true,
             "isMetadataFile": false,
             "size": 0,
-            "modifiedTime": 1544632083213,
-            "changeTime": 1544632083213,
-            "contentHash": "76fce3aefefc9ad06102bd07c89f4eca75984f3f",
+            "modifiedTime": 1544634282256,
+            "changeTime": 1544634282256,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "9072b4ca1ae0a83cd141f33c85816e896a641049"
         }
     ],
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 108,
             "modifiedTime": 1544632098634,
             "changeTime": 1544632098634,
             "contentHash": "5b6a4561d6410c6b9654765a9f1b3a40b5ac3de7",
+            "isMetadataFile": false,
+            "state": "u",
             "isWorkspace": false,
             "isArtifactRoot": false
         }
@@ -92,14 +91,14 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls-meta.xml",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 181,
             "modifiedTime": 1544632017270,
             "changeTime": 1544632017270,
             "contentHash": "e113ac965d59a048a94596fb729a5ab1902f1734",
+            "isMetadataFile": true,
+            "state": "u",
             "isWorkspace": false,
             "isArtifactRoot": false
         }
@@ -112,24 +111,23 @@
             "isDirectory": false,
             "isMetadataFile": false,
             "size": 268,
-            "modifiedTime": 1544632392237,
-            "changeTime": 1544632392237,
-            "contentHash": "7b7609b8b40677de9f26b6b6d755b37da60b029f",
+            "modifiedTime": 1544634415606,
+            "changeTime": 1544634415606,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "0c8675c751fae2ff63ee8fba45bdb4b499451238"
         }
     ],
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls-meta.xml",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 186,
             "modifiedTime": 1544632083217,
             "changeTime": 1544632083217,
             "contentHash": "8a1f8c46e67b4772bf8f7861bc26e4fcc0716eaf",
+            "isMetadataFile": true,
+            "state": "u",
             "isWorkspace": false,
             "isArtifactRoot": false
         }
@@ -142,11 +140,62 @@
             "isDirectory": true,
             "isMetadataFile": false,
             "size": 0,
-            "modifiedTime": 1544630949821,
-            "changeTime": 1544630949821,
-            "contentHash": "3d1494de113b6349d0874e0b71519070504ead7a",
+            "modifiedTime": 1544632852375,
+            "changeTime": 1544632852375,
             "isWorkspace": true,
-            "isArtifactRoot": false
+            "contentHash": "26d0c096328f96e3026f6031e140c63afa92be39"
+        }
+    ],
+    [
+        "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Bar.cls",
+        {
+            "state": "u",
+            "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Bar.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 107,
+            "modifiedTime": 1544634229381,
+            "changeTime": 1544634229381,
+            "contentHash": "43c9e5a4c45220aafe56251b1778a4866caaebc0"
+        }
+    ],
+    [
+        "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Bar.cls-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Bar.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 181,
+            "modifiedTime": 1544634194712,
+            "changeTime": 1544634194712,
+            "contentHash": "03830c836eb130661ed0acf7dce140bedff12dcb"
+        }
+    ],
+    [
+        "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls",
+        {
+            "state": "u",
+            "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 282,
+            "modifiedTime": 1544634405258,
+            "changeTime": 1544634405258,
+            "contentHash": "c2d6fdbb9b53974336c136a8ba0e7bdc040a642f"
+        }
+    ],
+    [
+        "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 185,
+            "modifiedTime": 1544634282259,
+            "changeTime": 1544634282259,
+            "contentHash": "3de965e345a09ad8f4207e335b31fdaaad081f43"
         }
     ]
 ]

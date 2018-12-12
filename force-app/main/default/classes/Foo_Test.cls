@@ -2,7 +2,7 @@
 public class Foo_Test {
     @isTest
     static void fooStringMethodTest() {
-        Foo f = new foo();
+        Foo f = new Foo();
         Test.startTest();
         String actual = f.fooStringMethod();
         Test.stopTest();

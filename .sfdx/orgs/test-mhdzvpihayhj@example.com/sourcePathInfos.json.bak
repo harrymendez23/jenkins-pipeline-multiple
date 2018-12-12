@@ -2,7 +2,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app",
             "isDirectory": true,
             "isMetadataFile": false,
@@ -17,7 +17,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main",
             "isDirectory": true,
             "isMetadataFile": false,
@@ -32,7 +32,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default",
             "isDirectory": true,
             "isMetadataFile": false,
@@ -47,7 +47,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\aura",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\aura",
             "isDirectory": true,
             "isMetadataFile": false,
@@ -62,7 +62,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes",
             "isDirectory": true,
             "isMetadataFile": false,
@@ -77,7 +77,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls",
             "isDirectory": false,
             "isMetadataFile": false,
@@ -92,7 +92,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls-meta.xml",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo.cls-meta.xml",
             "isDirectory": false,
             "isMetadataFile": true,
@@ -107,7 +107,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls",
             "isDirectory": false,
             "isMetadataFile": false,
@@ -122,7 +122,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls-meta.xml",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls-meta.xml",
             "isDirectory": false,
             "isMetadataFile": true,
@@ -137,7 +137,7 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple",
         {
-            "state": "n",
+            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple",
             "isDirectory": true,
             "isMetadataFile": false,
