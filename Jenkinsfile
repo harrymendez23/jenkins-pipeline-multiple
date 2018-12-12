@@ -1,7 +1,7 @@
 pipeline { 
     agent any
-    tools {
-        com.cloudbees.jenkins.plugins.customtools.CustomTool name: 'sfdx'
+    environment {
+        sfdx = tool name: 'sfdx', type: com.cloudbees.jenkins.plugins.customtools.CustomTool 
     }
     stages {
         stage('Stage 1') {
@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Create Scratch Org') {
             steps {
-                sh "sfdx --version"
+                sh "${sfdx}/sfdx --version"
             }
         }
     }
