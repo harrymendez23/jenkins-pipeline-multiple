@@ -1,5 +1,8 @@
 pipeline { 
     agent any
+    tools {
+        sfdx 'sfdx'
+    }
     stages {
         stage('Stage 1') {
             steps {
