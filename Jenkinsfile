@@ -34,6 +34,9 @@ pipeline {
             }
         }
         stage('Push Source to Test Org') {
+            options {
+                timeout(time: 2, unit: 'MINUTES')
+            }
             steps {
                 sh "${SFDX}/sfdx force:source:push --targetusername ${SCRATCH_ORG_ALIAS}"
             }
