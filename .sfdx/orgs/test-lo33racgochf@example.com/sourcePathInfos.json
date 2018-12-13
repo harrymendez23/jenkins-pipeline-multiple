@@ -1,0 +1,195 @@
+[
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app",
+            "isDirectory": true,
+            "size": 102,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main",
+            "isDirectory": true,
+            "size": 102,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default",
+            "isDirectory": true,
+            "size": 102,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "1adaa84dc07a16d34ede5b9a70713ff832a0f853",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes",
+            "isDirectory": true,
+            "size": 340,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "9072b4ca1ae0a83cd141f33c85816e896a641049",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Bar.cls",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Bar.cls",
+            "isDirectory": false,
+            "size": 107,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "43c9e5a4c45220aafe56251b1778a4866caaebc0",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Bar.cls-meta.xml",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Bar.cls-meta.xml",
+            "isDirectory": false,
+            "size": 181,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "03830c836eb130661ed0acf7dce140bedff12dcb",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/BarTest.cls",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/BarTest.cls",
+            "isDirectory": false,
+            "size": 282,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "c2d6fdbb9b53974336c136a8ba0e7bdc040a642f",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/BarTest.cls-meta.xml",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/BarTest.cls-meta.xml",
+            "isDirectory": false,
+            "size": 185,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "3de965e345a09ad8f4207e335b31fdaaad081f43",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo.cls",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo.cls",
+            "isDirectory": false,
+            "size": 171,
+            "modifiedTime": 1544720062000,
+            "changeTime": 1544720062000,
+            "contentHash": "d80e52fc9e6ed3451953e541c27f7d8da49a512e",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo.cls-meta.xml",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo.cls-meta.xml",
+            "isDirectory": false,
+            "size": 181,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "e113ac965d59a048a94596fb729a5ab1902f1734",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo_Test.cls",
+        {
+            "state": "u",
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo_Test.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 488,
+            "modifiedTime": 1544727458000,
+            "changeTime": 1544727458000,
+            "isWorkspace": false,
+            "contentHash": "e2ec6d57c980195fb8813a668fc533c58000014e"
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo_Test.cls-meta.xml",
+        {
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple/force-app/main/default/classes/Foo_Test.cls-meta.xml",
+            "isDirectory": false,
+            "size": 186,
+            "modifiedTime": 1544719753000,
+            "changeTime": 1544719753000,
+            "contentHash": "8a1f8c46e67b4772bf8f7861bc26e4fcc0716eaf",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/v408773/jenkins-pipeline-multiple",
+        {
+            "state": "u",
+            "sourcePath": "/Users/v408773/jenkins-pipeline-multiple",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 408,
+            "modifiedTime": 1544721622000,
+            "changeTime": 1544721622000,
+            "isWorkspace": true,
+            "contentHash": "bba87ebd76b5eb08f98b0fec3474ab0251207544"
+        }
+    ]
+]
