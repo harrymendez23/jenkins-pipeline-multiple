@@ -3,7 +3,7 @@ public with sharing class Foo {
         return 'some string';
     }
 
-    public String fooIntngMethod() {
+    public Integer fooIntngMethod() {
         return 0;
     }
 }
