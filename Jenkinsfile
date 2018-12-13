@@ -51,16 +51,23 @@ pipeline {
                         sh "${SFDX}/sfdx force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SCRATCH_ORG_ALIAS}"
                     }
                 } 
-                stage('Collect Test Results') {
-                    steps {
-                        junit keepLongStdio: true, testResults: 'tests/*-junit.xml'
-                    }
-                }
+                //stage('Collect Test Results') {
+                //    steps {
+                //        junit keepLongStdio: true, testResults: 'tests/*-junit.xml'
+                //    }
+                //}
             }
         }
         stage('Delete Scratch Org') {
             steps {
                 sh "${SFDX}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
+            }
+        }
+    }
+    post {
+        always {
+            steps {
+                junit keepLongStdio: true, testResults: 'tests/*-junit.xml'   
             }
         }
     }
