@@ -40,33 +40,53 @@ pipeline {
             options {
                 timeout(time: 5, unit: 'MINUTES')
             }
-            stages {
-                stage('Create Folder for Test Results') {
-                    steps {
-                        sh "mkdir -p ${RUN_ARTIFACT_DIR}"
+            steps {
+                sh "mkdir -p ${RUN_ARTIFACT_DIR}"
+
+                script {
+                    rc = sh returnStatus: true, script: "${SFDX}/sfdx force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SCRATCH_ORG_ALIAS}"
+                    try {
+                        if (rc != 0) {
+                            error 'Apex test run failed'
+                        }
                     }
+                    catch(exc) {
+                        currentBuild.result = 'FAILURE'
+                        throw exc.message
+                    }
+                    finally {
+                        stage('Collect Test Results') {
+                            junit keepLongStdio: true, testResults: 'tests/**/*-junit.xml'
+                        }
+
+                        stage('Delete Scratch Org') {
+                            sh returnStdout: true, script: "${sfdx}/sfdx force:org:delete --noprompt --targetusername ${SFDC_USERNAME}"
+                        }
+                    } 
                 }
-                stage('Execute Test') {
-                    steps {
-                        sh "${SFDX}/sfdx force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SCRATCH_ORG_ALIAS}"
-                    }
-                } 
+            }
+            //stages {
+                //stage('Create Folder for Test Results') {
+                //    steps {
+                //        sh "mkdir -p ${RUN_ARTIFACT_DIR}"
+                //    }
+                //}
+                //stage('Execute Test') {
+                //    steps {
+                //        sh "${SFDX}/sfdx force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SCRATCH_ORG_ALIAS}"
+                //    }
+                //} 
                 //stage('Collect Test Results') {
                 //    steps {
                 //        junit keepLongStdio: true, testResults: 'tests/*-junit.xml'
                 //    }
                 //}
-            }
+            //}
         }
-        stage('Delete Scratch Org') {
-            steps {
-                sh "${SFDX}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
-            }
-        }
-    }
-    post {
-        always {
-            junit keepLongStdio: true, testResults: 'tests/*-junit.xml'   
-        }
+        //stage('Delete Scratch Org') {
+        //    steps {
+        //        sh "${SFDX}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
+        //    }
+        //}
     }
 }
