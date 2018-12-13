@@ -6,7 +6,7 @@ public class Foo_Test {
         Test.startTest();
         String actual = f.fooStringMethod();
         Test.stopTest();
-
+        System.assert(false, 'Expected error');
         System.assertEquals('some string', actual);
     }
 }
