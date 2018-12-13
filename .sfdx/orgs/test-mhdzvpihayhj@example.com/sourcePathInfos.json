@@ -62,15 +62,15 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1544634282256,
             "changeTime": 1544634282256,
-            "isWorkspace": false,
-            "contentHash": "9072b4ca1ae0a83cd141f33c85816e896a641049"
+            "contentHash": "9072b4ca1ae0a83cd141f33c85816e896a641049",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -106,15 +106,15 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Foo_Test.cls",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 268,
             "modifiedTime": 1544634415606,
             "changeTime": 1544634415606,
-            "isWorkspace": false,
-            "contentHash": "0c8675c751fae2ff63ee8fba45bdb4b499451238"
+            "contentHash": "0c8675c751fae2ff63ee8fba45bdb4b499451238",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -135,15 +135,15 @@
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1544632852375,
             "changeTime": 1544632852375,
-            "isWorkspace": true,
-            "contentHash": "26d0c096328f96e3026f6031e140c63afa92be39"
+            "contentHash": "26d0c096328f96e3026f6031e140c63afa92be39",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": true
         }
     ],
     [
@@ -153,49 +153,49 @@
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Bar.cls",
             "isDirectory": false,
             "isMetadataFile": false,
-            "size": 107,
-            "modifiedTime": 1544634229381,
-            "changeTime": 1544634229381,
-            "contentHash": "43c9e5a4c45220aafe56251b1778a4866caaebc0"
+            "size": 148,
+            "modifiedTime": 1544714947397,
+            "changeTime": 1544714947397,
+            "contentHash": "c7a003523436061dab9efecded6c9b83277a14ec"
         }
     ],
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Bar.cls-meta.xml",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\Bar.cls-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 181,
             "modifiedTime": 1544634194712,
             "changeTime": 1544634194712,
-            "contentHash": "03830c836eb130661ed0acf7dce140bedff12dcb"
+            "contentHash": "03830c836eb130661ed0acf7dce140bedff12dcb",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 282,
             "modifiedTime": 1544634405258,
             "changeTime": 1544634405258,
-            "contentHash": "c2d6fdbb9b53974336c136a8ba0e7bdc040a642f"
+            "contentHash": "c2d6fdbb9b53974336c136a8ba0e7bdc040a642f",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls-meta.xml",
         {
-            "state": "u",
             "sourcePath": "c:\\Users\\Harry\\jenkins-pipeline-multiple\\force-app\\main\\default\\classes\\BarTest.cls-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 185,
             "modifiedTime": 1544634282259,
             "changeTime": 1544634282259,
-            "contentHash": "3de965e345a09ad8f4207e335b31fdaaad081f43"
+            "contentHash": "3de965e345a09ad8f4207e335b31fdaaad081f43",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ]
 ]
