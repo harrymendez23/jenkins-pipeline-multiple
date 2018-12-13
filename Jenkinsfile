@@ -60,7 +60,7 @@ pipeline {
                         }
 
                         stage('Delete Scratch Org') {
-                            sh returnStdout: true, script: "${sfdx}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
+                            sh returnStdout: true, script: "${SFDX}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
                         }
                     } 
                 }
@@ -74,7 +74,7 @@ pipeline {
                 branch 'prod-deployment'
             }
             steps {
-                sh "sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
+                sh "${SFDX}/sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
             }
         }
     }
