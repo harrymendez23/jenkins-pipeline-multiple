@@ -66,5 +66,16 @@ pipeline {
                 }
             }
         }
+        stage('Production Deployment') {
+            options {
+                timeout(time: 15, unit: 'MINUTES')
+            }
+            when {
+                branch 'production-deployment'
+            }
+            steps {
+                sh "sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
+            }
+        }
     }
 }
