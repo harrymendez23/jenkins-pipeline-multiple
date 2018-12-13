@@ -60,33 +60,11 @@ pipeline {
                         }
 
                         stage('Delete Scratch Org') {
-                            sh returnStdout: true, script: "${sfdx}/sfdx force:org:delete --noprompt --targetusername ${SFDC_USERNAME}"
+                            sh returnStdout: true, script: "${sfdx}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
                         }
                     } 
                 }
             }
-            //stages {
-                //stage('Create Folder for Test Results') {
-                //    steps {
-                //        sh "mkdir -p ${RUN_ARTIFACT_DIR}"
-                //    }
-                //}
-                //stage('Execute Test') {
-                //    steps {
-                //        sh "${SFDX}/sfdx force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SCRATCH_ORG_ALIAS}"
-                //    }
-                //} 
-                //stage('Collect Test Results') {
-                //    steps {
-                //        junit keepLongStdio: true, testResults: 'tests/*-junit.xml'
-                //    }
-                //}
-            //}
         }
-        //stage('Delete Scratch Org') {
-        //    steps {
-        //        sh "${SFDX}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
-        //    }
-        //}
     }
 }
