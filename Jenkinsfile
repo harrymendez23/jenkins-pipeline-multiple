@@ -66,9 +66,7 @@ pipeline {
     }
     post {
         always {
-            steps {
-                junit keepLongStdio: true, testResults: 'tests/*-junit.xml'   
-            }
+            junit keepLongStdio: true, testResults: 'tests/*-junit.xml'   
         }
     }
 }
