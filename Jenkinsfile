@@ -60,10 +60,21 @@ pipeline {
                         }
 
                         stage('Delete Scratch Org') {
-                            sh returnStdout: true, script: "${sfdx}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
+                            sh returnStdout: true, script: "${SFDX}/sfdx force:org:delete --noprompt --targetusername ${SCRATCH_ORG_ALIAS}"
                         }
                     } 
                 }
+            }
+        }
+        stage('Production Deployment') {
+            options {
+                timeout(time: 15, unit: 'MINUTES')
+            }
+            when {
+                branch 'prod-deployment'
+            }
+            steps {
+                sh "${SFDX}/sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
             }
         }
     }
