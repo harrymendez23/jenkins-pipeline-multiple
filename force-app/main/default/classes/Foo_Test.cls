@@ -9,4 +9,14 @@ public class Foo_Test {
 
         System.assertEquals('some string', actual);
     }
+
+    @isTest
+    static void fooIntMethodTest() {
+        Foo f = new Foo();
+        Test.startTest();
+        Integer actual = f.fooIntngMethod();
+        Test.stopTest();
+
+        System.assertEquals(0, actual);
+    }
 }
