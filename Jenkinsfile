@@ -7,6 +7,7 @@ pipeline {
         CONNECTED_APP_CONSUMER_KEY = '3MVG9KsVczVNcM8y39KwEqVDCbn2tWnKY6xyhAEBj4_qNArd1nXL1L1Io08XYotwNz5CWk8GYP1JbCzs_zgJS'
         SCRATCH_ORG_ALIAS = 'JenkinsPipelineMultipleBuild'
         RUN_ARTIFACT_DIR="tests"
+        MDAPI_DIR="mdapi-ouput"
 
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
     }
@@ -73,8 +74,22 @@ pipeline {
             when {
                 branch 'prod-deployment'
             }
-            steps {
-                sh "${SFDX}/sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
+            stages {
+                stage('Create Metadata API Output Folder') {
+                    steps {
+                        sh "[ ! -d ${MDAPI_DIR} ] && mkdir -p ${MDAPI_DIR}"
+                    }
+                }
+                stage('Convert Source Format to Metadata Format') {
+                    steps {
+                        sh "${SFDX}/sfdx force:source:convert -r force-app/main/default -d ${MDAPI_DIR}"
+                    }
+                }
+                stage('Metadata Deployment') {
+                    steps {
+                        sh "${SFDX}/sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
+                    }
+                }
             }
         }
     }
