@@ -9,4 +9,14 @@ public without sharing class BarTest {
 
         System.assertEquals('bar string', actual);
     }
+
+    @isTest
+    static void ishouldReturnInteger() {
+        Bar b = new Bar();
+        Test.startTest();
+        Integer actual = b.barIntergerMethod();
+        Test.stopTest();
+
+        system.assertEquals(2, actual);
+    }
 }
