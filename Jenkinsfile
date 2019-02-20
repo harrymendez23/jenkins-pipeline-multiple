@@ -72,7 +72,7 @@ pipeline {
                 timeout(time: 15, unit: 'MINUTES')
             }
             when {
-                branch 'prod-deployment'
+                branch 'release'
             }
             stages {
                 stage('Create Metadata API Output Folder') {
