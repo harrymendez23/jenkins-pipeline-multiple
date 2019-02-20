@@ -11,7 +11,7 @@ public without sharing class BarTest {
     }
 
     @isTest
-    static vpid ishouldReturnInteger() {
+    static void ishouldReturnInteger() {
         Bar b = new Bar();
         Test.startTest();
         Integer actual = b.barIntergerMethod();
