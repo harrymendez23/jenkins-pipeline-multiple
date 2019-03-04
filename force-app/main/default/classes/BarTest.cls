@@ -19,4 +19,14 @@ public without sharing class BarTest {
 
         system.assertEquals(2, actual);
     }
+
+    @isTest
+    static void ishouldReturnBoolean() {
+        Bar b = new Bar();
+        Test.startTest();
+        Boolean actual = b.barBoolMethod();
+        Test.stopTest();
+
+        system.assertEquals(false, actual);
+    }
 }

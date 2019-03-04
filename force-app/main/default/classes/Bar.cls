@@ -6,4 +6,8 @@ public with sharing class Bar {
     public Integer barIntergerMethod() {
         return Integer.valueOf(10 / 5);
     }
+
+    public Boolean barBoolMethod() {
+        return Boolean.valueOf('false');
+    }
 }
