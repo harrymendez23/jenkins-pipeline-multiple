@@ -81,7 +81,7 @@ pipeline {
 
                         sh "${SFDX}/sfdx force:source:convert -r force-app/main/default -d ${MDAPI_DIR}"
 
-                        sh "${SFDX}/sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
+                        sh "${SFDX}/sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir ${MDAPI_DIR} --wait 15"
                     }
                 }
             }
