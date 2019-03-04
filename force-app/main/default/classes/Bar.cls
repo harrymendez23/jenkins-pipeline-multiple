@@ -4,6 +4,6 @@ public with sharing class Bar {
     }
 
     public Integer barIntergerMethod() {
-        return Integer.valueOf(4 / 2);
+        return Integer.valueOf(10 / 5);
     }
 }
