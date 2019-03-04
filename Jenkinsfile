@@ -75,18 +75,12 @@ pipeline {
                 branch 'release/*'
             }
             stages {
-                stage('Create Metadata API Output Folder') {
+                stage('Release to Production') {
                     steps {
                         sh "[ ! -d ${MDAPI_DIR} ] && mkdir -p ${MDAPI_DIR}"
-                    }
-                }
-                stage('Convert Source Format to Metadata Format') {
-                    steps {
+
                         sh "${SFDX}/sfdx force:source:convert -r force-app/main/default -d ${MDAPI_DIR}"
-                    }
-                }
-                stage('Metadata Deployment') {
-                    steps {
+
                         sh "${SFDX}/sfdx force:mdapi:deploy --testlevel RunLocalTests --targetusername ${HUB_ORG} --deploydir mdapi-output --wait 15"
                     }
                 }
