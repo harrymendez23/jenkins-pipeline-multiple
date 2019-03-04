@@ -24,7 +24,7 @@ public without sharing class BarTest {
     static void ishouldReturnBoolean() {
         Bar b = new Bar();
         Test.startTest();
-        Integer actual = b.barBoolMethod();
+        Boolean actual = b.barBoolMethod();
         Test.stopTest();
 
         system.assertEquals(false, actual);
