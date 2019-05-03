@@ -2,9 +2,9 @@ pipeline {
     agent any 
     environment {
         SFDC_HOST = 'https://login.salesforce.com'
-        HUB_ORG = 'harry.mendez.devhub@gmail.com'
+        HUB_ORG = 'harry.mendez.dev1@gmail.com'
         JWT_KEY_CRED_ID = credentials('jenkins-sfdx-private-key')
-        CONNECTED_APP_CONSUMER_KEY = '3MVG9KsVczVNcM8y39KwEqVDCbn2tWnKY6xyhAEBj4_qNArd1nXL1L1Io08XYotwNz5CWk8GYP1JbCzs_zgJS'
+        CONNECTED_APP_CONSUMER_KEY = '3MVG9uudbyLbNPZNutF5d0NcX_iTNTGCrYFmy8bktYUW7eATXIbruxObZYPha6bNRd7xiuGhKmQ6FFK5tfz4Q'
         SCRATCH_ORG_ALIAS = 'JenkinsPipelineMultipleBuild'
         RUN_ARTIFACT_DIR="tests"
         MDAPI_DIR="mdapi-ouput"
