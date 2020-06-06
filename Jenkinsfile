@@ -24,7 +24,7 @@ pipeline {
                 }
                 stage('Create Scratch Org') {
                     steps {
-                        sh returnStdout: false, script: "${SFDX}/sfdx force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername --setalias ${SCRATCH_ORG_ALIAS}"
+                        sh "${SFDX}/sfdx force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername --setalias ${SCRATCH_ORG_ALIAS}"
                     }
                 }
             }
