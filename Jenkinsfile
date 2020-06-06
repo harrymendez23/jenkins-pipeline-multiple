@@ -8,7 +8,7 @@ pipeline {
         SCRATCH_ORG_ALIAS = 'JenkinsPipelineMultipleBuild'
         RUN_ARTIFACT_DIR="tests"
         MDAPI_DIR="mdapi-ouput"
-
+        //dummy comment
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
     }
     stages {
