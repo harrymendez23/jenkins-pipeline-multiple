@@ -86,4 +86,10 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'Workspace cleaned.'
+            deleteDir()
+        }
+    }
 }
