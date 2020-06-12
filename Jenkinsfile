@@ -18,8 +18,6 @@ pipeline {
             stages {
                 stage('Authenticate to DevHub') {
                     steps {
-                        echo 'Clean Workspace'
-                        deleteDir()
                         sh returnStatus: true, script: "${SFDX}/sfdx force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${JWT_KEY_CRED_ID} --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
                     }
                 }
