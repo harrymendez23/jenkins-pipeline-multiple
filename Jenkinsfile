@@ -16,7 +16,7 @@ pipeline {
                 timeout(time: 5, unit: 'MINUTES')
             }
             steps {
-                recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', sourceDirectory: '**/force-app/main/defaullt/classes', tools: [pmdParser(reportEncoding: 'UTF-8')]
+                recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(reportEncoding: 'UTF-8')
             }
         }
         stage('Initialize Scratch Org') {
