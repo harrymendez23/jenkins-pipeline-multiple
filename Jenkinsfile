@@ -10,6 +10,10 @@ pipeline {
         MDAPI_DIR="mdapi-ouput"
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
     }
+    tools {
+        maven 'mvn-default'
+        jdk 'jdk-default'
+    }
     stages {
         stage('Initialize Scratch Org') {
             options {
@@ -34,6 +38,14 @@ pipeline {
             }
             steps {
                 sh "${SFDX}/sfdx force:source:push --targetusername ${SCRATCH_ORG_ALIAS}"
+            }
+        }
+        stage('Static analysis') {
+            options {
+                timeout(time: 5, unit: 'MINUTES')
+            }
+            steps {
+                sh "${M2_HOME}/bin/mvn --batch-mode -V -U -e checkstyle:checkstyle pmd:pmd pmd:cpd findbugs:findbugs spotbugs:spotbugs"
             }
         }
         stage('Run Apex Test') {
