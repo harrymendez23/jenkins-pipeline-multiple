@@ -16,7 +16,7 @@ pipeline {
                 timeout(time: 5, unit: 'MINUTES')
             }
             steps {
-                recordIssues enabledForFailure: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(pattern: '**/*.cls')
+                recordIssues enabledForFailure: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(pattern: '**/apex_ruleset.xml')
             }
         }
         stage('Initialize Scratch Org') {
