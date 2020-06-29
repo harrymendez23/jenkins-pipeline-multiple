@@ -9,9 +9,16 @@ pipeline {
         RUN_ARTIFACT_DIR="tests"
         MDAPI_DIR="mdapi-ouput"
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
-        M2_HOME =  tool 'mvn-default'
     }
     stages {
+        stage('Static analysis') {
+            options {
+                timeout(time: 5, unit: 'MINUTES')
+            }
+            steps {
+                recordIssues enabledForFailure: true, filters: [includeFile('*.cls')], tool: pmdParser(pattern: '**/target/pmd.xml')
+            }
+        }
         stage('Initialize Scratch Org') {
             options {
                 timeout(time: 5, unit: 'MINUTES')
@@ -36,15 +43,7 @@ pipeline {
             steps {
                 sh "${SFDX}/sfdx force:source:push --targetusername ${SCRATCH_ORG_ALIAS}"
             }
-        }
-        stage('Static analysis') {
-            options {
-                timeout(time: 5, unit: 'MINUTES')
-            }
-            steps {
-                sh "${M2_HOME}/bin/mvn --batch-mode -V -U -e pmd:pmd pmd:cpd"
-            }
-        }
+        } 
         stage('Run Apex Test') {
             options {
                 timeout(time: 5, unit: 'MINUTES')
@@ -97,7 +96,6 @@ pipeline {
     }
     post {
         always {
-            recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/target/pmd.xml')
             echo 'Workspace cleaned.'
             deleteDir()
         }
