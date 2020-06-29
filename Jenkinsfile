@@ -16,7 +16,7 @@ pipeline {
                 timeout(time: 5, unit: 'MINUTES')
             }
             steps {
-                recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/force-app/main/default/**/*.cls')
+                recordIssues enabledForFailure: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(pattern: '**/*.cls')
             }
         }
         stage('Initialize Scratch Org') {
