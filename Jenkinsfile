@@ -42,7 +42,7 @@ pipeline {
                 timeout(time: 5, unit: 'MINUTES')
             }
             steps {
-                sh "${M2_HOME}/bin/mvn --batch-mode -V -U -e checkstyle:checkstyle pmd:pmd pmd:cpd findbugs:findbugs spotbugs:spotbugs"
+                sh "${M2_HOME}/bin/mvn --batch-mode -V -U -e pmd:pmd pmd:cpd"
             }
         }
         stage('Run Apex Test') {
@@ -97,6 +97,7 @@ pipeline {
     }
     post {
         always {
+            recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/target/pmd.xml')
             echo 'Workspace cleaned.'
             deleteDir()
         }
