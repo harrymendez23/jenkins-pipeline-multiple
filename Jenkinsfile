@@ -9,7 +9,7 @@ pipeline {
         RUN_ARTIFACT_DIR="tests"
         MDAPI_DIR="mdapi-ouput"
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
-        M2_HOME = '/opt/maven'
+        M2_HOME =  tool 'mvn-default'
     }
     stages {
         stage('Initialize Scratch Org') {
