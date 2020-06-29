@@ -10,10 +10,6 @@ pipeline {
         MDAPI_DIR="mdapi-ouput"
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
     }
-    tools {
-        maven 'mvn-default'
-        jdk 'jdk-default'
-    }
     stages {
         stage('Initialize Scratch Org') {
             options {
