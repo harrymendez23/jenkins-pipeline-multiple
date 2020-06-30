@@ -9,7 +9,7 @@ pipeline {
         RUN_ARTIFACT_DIR="tests"
         MDAPI_DIR="mdapi-ouput"
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
-        MAVEN = tool name: 'mvn', type: 'mvn-default'
+        MAVEN = '/opt/maven/bin/'
     }
     stages {
         stage('Static analysis') {
