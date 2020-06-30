@@ -9,7 +9,10 @@ pipeline {
         RUN_ARTIFACT_DIR="tests"
         MDAPI_DIR="mdapi-ouput"
         SFDX = tool name: 'sfdx', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
-        MAVEN = '/opt/maven/bin'
+        M2_HOME = 'opt/maven/bin'
+    }
+    tools {
+        maven 'mvn-default'
     }
     stages {
         stage('Static analysis') {
@@ -17,7 +20,7 @@ pipeline {
                 timeout(time: 5, unit: 'MINUTES')
             }
             steps {
-                sh "${MAVEN}/mvn --batch-mode -V -U -e clean verify -Dsurefire.useFile=false -Dmaven.test.failure.ignore"
+                sh "${M2_HOME}/mvn --batch-mode -V -U -e clean verify -Dsurefire.useFile=false -Dmaven.test.failure.ignore"
                 recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(reportEncoding: 'UTF-8')
             }
         }
