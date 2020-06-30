@@ -20,7 +20,7 @@ pipeline {
                 timeout(time: 5, unit: 'MINUTES')
             }
             steps {
-                sh "${M2_HOME}/mvn --batch-mode -V -U -e clean verify -Dsurefire.useFile=false -Dmaven.test.failure.ignore"
+                sh "mvn --batch-mode -V -U -e clean verify -Dsurefire.useFile=false -Dmaven.test.failure.ignore"
                 recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(reportEncoding: 'UTF-8')
             }
         }
