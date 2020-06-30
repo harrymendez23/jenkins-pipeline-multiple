@@ -15,13 +15,23 @@ pipeline {
         maven 'mvn-default'
     }
     stages {
-        stage('Static analysis') {
+        stage('Run Static code analysis') {
             options {
                 timeout(time: 5, unit: 'MINUTES')
             }
+            
             steps {
                 sh "mvn --batch-mode -V -U -e clean verify -Dsurefire.useFile=false -Dmaven.test.failure.ignore"
                 recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(reportEncoding: 'UTF-8')
+            }
+        }
+        stage('Record analysis') {
+            options {
+                timeout(time: 5, unit: 'MINUTES')
+            }
+            
+            steps {
+                sh 'mvn --batch-mode -V -U -e checkstyle:checkstyle pmd:pmd'
             }
         }
         stage('Initialize Scratch Org') {
@@ -101,6 +111,7 @@ pipeline {
     }
     post {
         always {
+            recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(reportEncoding: 'UTF-8')
             echo 'Workspace cleaned.'
         }
     }
