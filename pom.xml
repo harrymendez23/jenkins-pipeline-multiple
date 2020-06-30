@@ -26,6 +26,22 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <reporting>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>2.7.1</version>
+            <configuration>
+                <linkXRef>false</linkXRef>
+                <targetJdk>1.6</targetJdk>
+                <rulesets>
+                    <ruleset>apex_ruleset.xml</ruleset>
+                </rulesets>
+            </configuration>
+          </plugin>
+      </plugins>
+  </reporting>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
