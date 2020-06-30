@@ -22,7 +22,6 @@ pipeline {
             
             steps {
                 sh "mvn --batch-mode -V -U -e clean verify -Dsurefire.useFile=false -Dmaven.test.failure.ignore"
-                recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(reportEncoding: 'UTF-8')
             }
         }
         stage('Record analysis') {
