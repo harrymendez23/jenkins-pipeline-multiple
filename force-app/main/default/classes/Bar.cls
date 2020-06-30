@@ -10,4 +10,8 @@ public with sharing class Bar {
     public Boolean barBoolMethod() {
         return Boolean.valueOf('false');
     }
+
+    public void longParameterList(string a, String b, String c, String c) {
+        System.debug('too many parameters');
+    }
 }
