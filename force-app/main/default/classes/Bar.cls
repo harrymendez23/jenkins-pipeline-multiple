@@ -12,6 +12,6 @@ public with sharing class Bar {
     }
 
     public void longParameterList(string a, String b, String c, String d, String e) {
-        System.debug('too many parameters');
+        System.debug('too many parameters warning');
     }
 }
