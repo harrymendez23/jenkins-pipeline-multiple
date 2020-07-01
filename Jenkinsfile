@@ -110,7 +110,9 @@ pipeline {
     }
     post {
         always {
-            recordIssues aggregatingResults: true, sourceCodeEncoding: 'UTF-8', tool: pmdParser(reportEncoding: 'UTF-8')
+            recordIssues sourceDirectory: 'force-app/main/default/**', sourceCodeEncoding: 'UTF-8',
+                referenceJobName: 'jenkins-pipeline-multiple/master',
+                tool: pmdParser(reportEncoding: 'UTF-8')
             echo 'Workspace cleaned.'
         }
     }
