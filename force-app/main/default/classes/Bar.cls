@@ -11,7 +11,7 @@ public with sharing class Bar {
         return Boolean.valueOf('false');
     }
 
-    public void longParameterList(string a, String b, String c, String d) {
+    public void longParameterList(string a, String b, String c, String d, String e) {
         System.debug('too many parameters');
     }
 }
