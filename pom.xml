@@ -33,9 +33,13 @@
             <artifactId>maven-pmd-plugin</artifactId>
             <version>3.13.0</version>
             <configuration>
-                <rulesets>
-                    <ruleset>apex_ruleset.xml</ruleset>
-                </rulesets>
+              <!-- failOnViolation is actually true by default, but can be disabled -->
+              <failOnViolation>true</failOnViolation>
+              <!-- printFailingErrors is pretty useful -->
+              <printFailingErrors>true</printFailingErrors>
+              <rulesets>
+                  <ruleset>../apex_ruleset.xml</ruleset>
+              </rulesets>
             </configuration>
           </plugin>
       </plugins>
